@@ -51,13 +51,14 @@ LIBS:itead_hc-0X_bluetooth
 LIBS:joystick_SKRHAAE010
 LIBS:STM32F407IGT6
 LIBS:slc_oem
+LIBS:minefi-cache
 EELAYER 27 0
 EELAYER END
 $Descr B 17000 11000
 encoding utf-8
 Sheet 2 6
 Title "Frankenso"
-Date "26 jul 2015"
+Date "28 jul 2015"
 Rev ".02"
 Comp "rusEFI.com"
 Comment1 ""
@@ -706,8 +707,6 @@ Text Label 7000 8600 0    60   ~ 0
 INP5
 Text Label 10500 9100 0    60   ~ 0
 OUT5
-Text Label 6050 7400 0    60   ~ 0
-INP6
 $Comp
 L R R251
 U 1 1 524B8476
@@ -1611,18 +1610,12 @@ Text HLabel 16025 1375 2    60   Input ~ 0
 OUT9
 Text HLabel 16025 1475 2    60   Input ~ 0
 OUT11
-Text HLabel 4300 8000 1    60   Input ~ 0
-5V
 Text HLabel 4300 9000 3    60   Input ~ 0
 GND
 Text HLabel 12500 3950 1    60   Input ~ 0
 12V_bat
 Wire Wire Line
 	4750 8700 4750 9150
-Wire Wire Line
-	4150 9000 4450 9000
-Wire Wire Line
-	4300 8000 4300 8400
 Connection ~ 4300 9000
 Wire Wire Line
 	4750 9150 3850 9150
@@ -1638,9 +1631,6 @@ Wire Wire Line
 	3700 7600 3700 7300
 Wire Wire Line
 	3700 7300 3900 7300
-Wire Wire Line
-	3900 8250 4300 8250
-Connection ~ 4300 8250
 Wire Wire Line
 	675  1800 875  1800
 Wire Wire Line
@@ -2238,5 +2228,20 @@ Wire Wire Line
 Text HLabel 14625 1375 0    60   Input ~ 0
 OUT10
 Text Label 12500 8200 0    60   ~ 0
+5V
+NoConn ~ 675  1300
+NoConn ~ 675  1150
+NoConn ~ 675  850 
+NoConn ~ 675  750 
+NoConn ~ 15825 1275
+NoConn ~ 15825 1475
+NoConn ~ 15825 975 
+NoConn ~ 15025 1375
+Wire Wire Line
+	4300 9000 4450 9000
+Wire Wire Line
+	4300 8000 4300 8400
+Connection ~ 4300 8250
+Text HLabel 4300 8000 1    60   Input ~ 0
 5V
 $EndSCHEMATC

@@ -51,13 +51,14 @@ LIBS:itead_hc-0X_bluetooth
 LIBS:joystick_SKRHAAE010
 LIBS:STM32F407IGT6
 LIBS:slc_oem
+LIBS:minefi-cache
 EELAYER 27 0
 EELAYER END
 $Descr B 17000 11000
 encoding utf-8
 Sheet 1 6
 Title "Frankenso"
-Date "26 jul 2015"
+Date "28 jul 2015"
 Rev ".04"
 Comp "rusEFI.com"
 Comment1 ""
@@ -173,9 +174,9 @@ Text Label 12400 2550 3    60   ~ 0
 LOW-1A-02
 Text Label 12500 2550 3    60   ~ 0
 LOW-1A-01_2
-Text Label 14150 2100 3    60   ~ 0
-CAM+
 Text Label 14250 2100 3    60   ~ 0
+CAM+
+Text Label 14150 2100 3    60   ~ 0
 CAM-
 Text Label 14050 2100 3    60   ~ 0
 CRK2-
@@ -403,45 +404,6 @@ F 5 "DO NOT POPULATE,DNP" V 1130 2600 60  0001 C CNN "vend1,vend1#"
 	1    7600 8700
 	-1   0    0    1   
 $EndComp
-$Comp
-L CONN_1 P20
-U 1 1 53BC309C
-P 9250 4400
-F 0 "P20" H 9330 4400 40  0000 L CNN
-F 1 "CONN_1" H 9250 4455 30  0001 C CNN
-F 2 "SIL-1" V 2780 -1900 60  0001 C CNN
-F 3 "" H 9250 4400 60  0001 C CNN
-F 4 "DO NOT POPULATE,DNP" V 2780 -1900 60  0001 C CNN "mfg,mfg#"
-F 5 "DO NOT POPULATE,DNP" V 2780 -1900 60  0001 C CNN "vend1,vend1#"
-	1    9250 4400
-	1    0    0    -1  
-$EndComp
-$Comp
-L CONN_1 P21
-U 1 1 53BC30A2
-P 9250 4700
-F 0 "P21" H 9330 4700 40  0000 L CNN
-F 1 "CONN_1" H 9250 4755 30  0001 C CNN
-F 2 "SIL-1" V 2780 -1700 60  0001 C CNN
-F 3 "" H 9250 4700 60  0001 C CNN
-F 4 "DO NOT POPULATE,DNP" V 2780 -1700 60  0001 C CNN "mfg,mfg#"
-F 5 "DO NOT POPULATE,DNP" V 2780 -1700 60  0001 C CNN "vend1,vend1#"
-	1    9250 4700
-	1    0    0    -1  
-$EndComp
-$Comp
-L CONN_1 P23
-U 1 1 53BC30AE
-P 9250 4000
-F 0 "P23" H 9330 4000 40  0000 L CNN
-F 1 "CONN_1" H 9250 4055 30  0001 C CNN
-F 2 "SIL-1" V 1130 2600 60  0001 C CNN
-F 3 "" H 9250 4000 60  0001 C CNN
-F 4 "DO NOT POPULATE,DNP" V 1130 2600 60  0001 C CNN "mfg,mfg#"
-F 5 "DO NOT POPULATE,DNP" V 1130 2600 60  0001 C CNN "vend1,vend1#"
-	1    9250 4000
-	1    0    0    -1  
-$EndComp
 NoConn ~ 7750 7700
 NoConn ~ 7750 7600
 NoConn ~ 7750 7500
@@ -550,8 +512,6 @@ F 5 "DO NOT POPULATE,DNP" V 2680 4150 60  0001 C CNN "vend1,vend1#"
 	1    9150 10350
 	1    0    0    -1  
 $EndComp
-Text Label 5700 5250 2    60   ~ 0
-5V
 NoConn ~ 7750 10000
 $Sheet
 S 7750 3550 1250 6850
@@ -669,15 +629,6 @@ Wire Wire Line
 	7650 6500 7750 6500
 Wire Wire Line
 	7600 6400 7750 6400
-Connection ~ 9100 4750
-Wire Wire Line
-	9100 4700 9100 4750
-Connection ~ 9100 4450
-Wire Wire Line
-	9100 4400 9100 4450
-Connection ~ 9100 4050
-Wire Wire Line
-	9100 4000 9100 4050
 Wire Wire Line
 	9450 6800 9600 6800
 Wire Wire Line
@@ -715,27 +666,11 @@ Wire Wire Line
 Wire Wire Line
 	7150 4150 7750 4150
 Wire Wire Line
-	9000 4950 9600 4950
-Wire Wire Line
-	9000 4850 9600 4850
-Wire Wire Line
-	9000 4750 9600 4750
-Wire Wire Line
-	9000 4250 9600 4250
-Wire Wire Line
 	9000 4150 9600 4150
 Wire Wire Line
 	9000 4050 9600 4050
 Wire Wire Line
 	9000 3950 9600 3950
-Wire Wire Line
-	9000 4650 9600 4650
-Wire Wire Line
-	9000 4550 9600 4550
-Wire Wire Line
-	9000 4450 9600 4450
-Wire Wire Line
-	9000 4350 9600 4350
 Wire Wire Line
 	9000 3850 9600 3850
 Connection ~ 13850 2750
@@ -832,4 +767,8 @@ NoConn ~ 11100 4650
 NoConn ~ 11100 4750
 NoConn ~ 11100 4850
 NoConn ~ 11100 4950
+Text Label 5700 5250 2    60   ~ 0
+5V
+Wire Wire Line
+	9000 4250 9600 4250
 $EndSCHEMATC

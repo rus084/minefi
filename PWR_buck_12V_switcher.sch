@@ -51,13 +51,14 @@ LIBS:itead_hc-0X_bluetooth
 LIBS:joystick_SKRHAAE010
 LIBS:STM32F407IGT6
 LIBS:slc_oem
+LIBS:minefi-cache
 EELAYER 27 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
 Sheet 5 6
 Title "Frankenso"
-Date "26 jul 2015"
+Date "28 jul 2015"
 Rev ".02"
 Comp "rusEFI.com"
 Comment1 ""
@@ -202,19 +203,6 @@ Text Label 8200 6300 0    60   ~ 0
 FB
 Text Label 8200 6450 0    60   ~ 0
 OUT
-$Comp
-L GND #PWR047
-U 1 1 52C4D1EB
-P 7450 6900
-F 0 "#PWR047" H 7450 6900 30  0001 C CNN
-F 1 "GND" H 7450 6830 30  0001 C CNN
-F 2 "" H 7450 6900 60  0000 C CNN
-F 3 "" H 7450 6900 60  0000 C CNN
-	1    7450 6900
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	7450 6850 7450 6900
 $Comp
 L DIODE D1002
 U 1 1 52C61746

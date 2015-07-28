@@ -51,13 +51,14 @@ LIBS:itead_hc-0X_bluetooth
 LIBS:joystick_SKRHAAE010
 LIBS:STM32F407IGT6
 LIBS:slc_oem
+LIBS:minefi-cache
 EELAYER 27 0
 EELAYER END
 $Descr B 17000 11000
 encoding utf-8
 Sheet 3 6
 Title "Frankenso"
-Date "26 jul 2015"
+Date "28 jul 2015"
 Rev ".02"
 Comp "rusEFI.com"
 Comment1 ""
@@ -75,6 +76,16 @@ Text Notes 700  9400 0    60   ~ 0
 MISC NOTES\n\nTHE GENERAL SYSTEM LAYOUT IS SHOWN IN BLUE. THIS IS NOT\nTHE SUGGESTED SYSTEM WIRING, IT DOES SHOW THE GENERAL \nOVERALL CIRCUIT LAYOUT TOPOLOGY. \n\nTHE PCB WIRING IS SHOWN IN RED, GREEN WITH A BLUE BUS.\n\nScrew terminals 1760500000\n\nScrew connector PCB http://octopart.com/39522-1007-molex-655409 \nScrew connector harness http://octopart.com/partsearch#search/requestData&q=39520-0007
 Text Notes 12575 5425 0    60   ~ 0
 BAT
+Text Label 6125 5925 2    60   ~ 0
+INJ-08_5V
+Text Label 6075 5425 2    60   ~ 0
+INJ-07_5V
+Text Label 6125 7175 2    60   ~ 0
+INJ-10_5V
+Text Label 6075 6675 2    60   ~ 0
+INJ-09_5V
+Text Label 6075 7925 2    60   ~ 0
+INJ-11_5V
 Text Notes 11550 4975 0    60   ~ 0
 FUSE
 $Comp
@@ -234,6 +245,10 @@ F 5 "DIGI,P1.0KDACT-ND" V 1130 2600 60  0001 C CNN "vend1,vend1#"
 	1    6875 2875
 	0    1    1    0   
 $EndComp
+Text Label 6075 4075 2    60   ~ 0
+INJ-05_5V
+Text Label 6125 4575 2    60   ~ 0
+INJ-06_5V
 $Comp
 L R R403
 U 1 1 52AC757A
@@ -286,6 +301,22 @@ F 5 "DIGI,ERJ-6ENF20R0V" V 3305 950 60  0001 C CNN "vend1,vend1#"
 	1    6375 3325
 	0    1    1    0   
 $EndComp
+Text Label 8925 5025 2    60   ~ 0
+INJ-11
+Text Label 8925 5125 2    60   ~ 0
+INJ-12
+Text Label 8925 4825 2    60   ~ 0
+INJ-09
+Text Label 8925 4925 2    60   ~ 0
+INJ-10
+Text Label 8925 4525 2    60   ~ 0
+INJ-07
+Text Label 8925 4625 2    60   ~ 0
+INJ-08
+Text Label 8925 4325 2    60   ~ 0
+INJ-05
+Text Label 8925 4425 2    60   ~ 0
+INJ-06
 Text Label 8925 4025 2    60   ~ 0
 INJ-03
 Text Label 8925 4125 2    60   ~ 0
@@ -294,6 +325,12 @@ Text Label 8925 3825 2    60   ~ 0
 INJ-01_2
 Text Label 8925 3925 2    60   ~ 0
 INJ-02
+Text Label 8925 4225 2    60   ~ 0
+iGND1
+Text Label 8925 4725 2    60   ~ 0
+iGND1
+Text Label 8925 5225 2    60   ~ 0
+iGND1
 Text Label 8925 3725 2    60   ~ 0
 iGND1
 Wire Notes Line
@@ -369,7 +406,15 @@ Wire Notes Line
 Wire Notes Line
 	12425 5100 12375 5100
 Wire Wire Line
+	7525 8675 8650 8675
+Wire Wire Line
+	7525 7575 8575 7575
+Wire Wire Line
 	7525 1225 8075 1225
+Wire Wire Line
+	7525 6325 8375 6325
+Wire Wire Line
+	7525 7425 8475 7425
 Wire Notes Line
 	12250 5125 12375 5125
 Connection ~ -4675 3450
@@ -387,6 +432,8 @@ Wire Notes Line
 	11575 5200 11575 5050
 Wire Notes Line
 	11500 5050 11825 5050
+Wire Wire Line
+	7525 6175 8275 6175
 Wire Notes Line
 	13100 4200 9375 4200
 Wire Notes Line
@@ -456,6 +503,12 @@ Connection ~ 6575 1575
 Wire Wire Line
 	6575 1475 6575 1625
 Wire Wire Line
+	7525 4825 8075 4825
+Wire Wire Line
+	7525 3725 8075 3725
+Wire Wire Line
+	7525 5075 8175 5075
+Wire Wire Line
 	7525 2475 8275 2475
 Wire Wire Line
 	7525 3575 8175 3575
@@ -515,6 +568,34 @@ Wire Notes Line
 	12975 5600 12975 5175
 Connection ~ 8075 725 
 Wire Wire Line
+	8925 4425 8075 4425
+Wire Wire Line
+	8075 4425 8075 4825
+Wire Wire Line
+	8175 5075 8175 4525
+Wire Wire Line
+	8175 4525 8925 4525
+Wire Wire Line
+	8925 4625 8275 4625
+Wire Wire Line
+	8275 4625 8275 6175
+Wire Wire Line
+	8925 4825 8375 4825
+Wire Wire Line
+	8375 4825 8375 6325
+Wire Wire Line
+	8925 4925 8475 4925
+Wire Wire Line
+	8475 4925 8475 7425
+Wire Wire Line
+	8925 5025 8575 5025
+Wire Wire Line
+	8575 5025 8575 7575
+Wire Wire Line
+	8925 5125 8650 5125
+Wire Wire Line
+	8650 5125 8650 8675
+Wire Wire Line
 	8925 3825 8475 3825
 Wire Wire Line
 	8475 3825 8475 2175
@@ -534,6 +615,10 @@ Wire Wire Line
 	8175 4125 8175 3575
 Wire Wire Line
 	7125 2975 7725 2975
+Wire Wire Line
+	8925 4325 8075 4325
+Wire Wire Line
+	8075 4325 8075 3725
 Wire Notes Line
 	9725 5000 9725 5125
 Wire Notes Line
@@ -546,6 +631,8 @@ Wire Notes Line
 	10775 4875 10775 4775
 Text Notes 9400 6650 0    160  ~ 0
 12 channel injector driver\nalso suitable for fuel pump relay, IAC solenoid etc
+Text HLabel 7600 6175 1    60   Input ~ 0
+INJ-08
 Text HLabel 2700 4775 0    60   Input ~ 0
 INJ-01_5V
 Text HLabel 2700 4875 0    60   Input ~ 0
@@ -570,6 +657,14 @@ Text HLabel 5150 5175 2    60   Input ~ 0
 INJ-10_5V
 Text HLabel 5150 5275 2    60   Input ~ 0
 INJ-12_5V
+Text HLabel 7600 4825 1    60   Input ~ 0
+INJ-06
+Text HLabel 7600 7425 1    60   Input ~ 0
+INJ-10
+Text HLabel 7600 3725 3    60   Input ~ 0
+INJ-05
+Text HLabel 7625 8675 1    60   Input ~ 0
+INJ-12
 Text HLabel 7600 3575 1    60   Input ~ 0
 INJ-04
 Text HLabel 7600 2475 3    60   Input ~ 0
@@ -580,12 +675,68 @@ Text HLabel 8075 1725 2    60   Input ~ 0
 INJ-01_2
 Text HLabel 8075 725  2    60   Input ~ 0
 5V
-NoConn ~ 3525 4975
-NoConn ~ 3525 5075
-NoConn ~ 3525 5175
-NoConn ~ 3525 5275
+Text HLabel 7600 7575 3    60   Input ~ 0
+INJ-11
+Text HLabel 7600 6325 3    60   Input ~ 0
+INJ-09
+Text HLabel 7600 5075 3    60   Input ~ 0
+INJ-07
 NoConn ~ 4325 4975
 NoConn ~ 4325 5075
 NoConn ~ 4325 5175
 NoConn ~ 4325 5275
+NoConn ~ 3525 5275
+NoConn ~ 3525 5175
+NoConn ~ 3525 5075
+NoConn ~ 3525 4975
+NoConn ~ 7525 6175
+NoConn ~ 7525 6325
+NoConn ~ 7525 8675
+NoConn ~ 7525 7575
+NoConn ~ 7525 7425
+Text Label 6125 8425 2    60   ~ 0
+INJ-12_5V
+NoConn ~ 6125 8425
+NoConn ~ 6075 7925
+NoConn ~ 6125 7175
+NoConn ~ 6075 6675
+NoConn ~ 6125 5925
+NoConn ~ 6075 5425
+NoConn ~ 6125 4575
+NoConn ~ 7525 5075
+NoConn ~ 7525 4825
+NoConn ~ 6075 4075
+NoConn ~ 7525 3725
+Wire Wire Line
+	7950 4275 7950 4225
+Connection ~ 7950 4225
+Text HLabel 7950 4225 1    60   Input ~ 0
+iGND2
+$Comp
+L GND #PWR041
+U 1 1 52E4981F
+P 7950 4275
+F 0 "#PWR041" H 7950 4275 30  0001 C CNN
+F 1 "GND" H 7950 4205 30  0001 C CNN
+F 2 "" H 7950 4275 60  0001 C CNN
+F 3 "" H 7950 4275 60  0001 C CNN
+	1    7950 4275
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7725 6825 7725 6875
+Connection ~ 7725 6825
+$Comp
+L GND #PWR042
+U 1 1 50D4F374
+P 7725 6875
+F 0 "#PWR042" H 7725 6875 30  0001 C CNN
+F 1 "GND" H 7725 6805 30  0001 C CNN
+F 2 "" H 7725 6875 60  0001 C CNN
+F 3 "" H 7725 6875 60  0001 C CNN
+	1    7725 6875
+	1    0    0    -1  
+$EndComp
+Text HLabel 7725 6825 1    60   Input ~ 0
+iGND1
 $EndSCHEMATC

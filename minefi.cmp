@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2013-jul-07)-stable date = Вс. 26 июля 2015 18:50:45
+Cmp-Mod V01 Created by CvPcb (2013-jul-07)-stable date = Вт. 28 июля 2015 18:35:31
 
 BeginCmp
 TimeStamp = /53BB2E22;
@@ -381,27 +381,6 @@ EndCmp
 BeginCmp
 TimeStamp = /53BC3090;
 Reference = P18;
-ValeurCmp = CONN_1;
-IdModule  = SIL-1;
-EndCmp
-
-BeginCmp
-TimeStamp = /53BC309C;
-Reference = P20;
-ValeurCmp = CONN_1;
-IdModule  = SIL-1;
-EndCmp
-
-BeginCmp
-TimeStamp = /53BC30A2;
-Reference = P21;
-ValeurCmp = CONN_1;
-IdModule  = SIL-1;
-EndCmp
-
-BeginCmp
-TimeStamp = /53BC30AE;
-Reference = P23;
 ValeurCmp = CONN_1;
 IdModule  = SIL-1;
 EndCmp
